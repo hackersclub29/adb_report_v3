@@ -46,6 +46,3 @@ Every device shell command passes a guard that refuses writes/redirections, `rm/
 - `--redact` and all masking/omission were **removed** as requested (flag is accepted and ignored). Reports contain serials, MACs, SSIDs, accounts, etc. - treat artifacts as sensitive.
 - No vendor/version-specific package lists or property names; installer/system classification uses partitions, flags and runtime discovery.
 - Fixed v2 issues: silent discard of stderr/exit code, `''` meaning both "empty" and "failed", brittle quoting, single-user assumptions, merged per-user permission state, fixed-role list.
-
-## Verification status (be aware)
-88 unit/integration tests pass (`TEST_RESULTS.txt`) against a **mocked** ADB transport. The tool has **not** been run against a physical device in this environment, and the Windows tests are simulations of Windows path/quoting behaviour on Linux; please run `pytest` natively in PowerShell and a `--profile quick` run on your phone first. Dumpsys formats differ across Android builds, so some parsers (alarms, notifications, exit-info, netstats, resolver tables, battery stats) are best-effort; raw output is always preserved and parse problems are listed under *Parser diagnostics*.
