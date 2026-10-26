@@ -1,0 +1,4 @@
+# adb_report v3 uses only the Python 3.9+ standard library. Nothing to install to run it.
+# Optional external tools (auto-detected on PATH, or pass --apksigner/--apkanalyzer/--apktool/--jadx):
+#   Android SDK build-tools (apksigner), Android SDK cmdline-tools (apkanalyzer), Apktool, JADX, MobSF server.
+# Tests: pip install -r requirements-dev.txt
